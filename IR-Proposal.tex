@@ -1,48 +1,106 @@
-\documentclass[prodmode,acmtap]{acmlarge}
+\documentclass[acmlarge]{acmart}
+
+% For algorithms
+\usepackage[ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
 
 % Metadata Information
+\acmJournal{JOCCH}
 \acmVolume{2}
 \acmNumber{3}
 \acmArticle{1}
-\articleSeq{1}
-\acmYear{2010}
-\acmMonth{5}
+\acmYear{2017}
+\acmMonth{3}
+\acmArticleSeq{11}
 
-% Package to generate and customize Algorithm as per ACM style
-\usepackage[ruled]{algorithm2e}
-\SetAlFnt{\algofont}
-\SetAlCapFnt{\algofont}
-\SetAlCapNameFnt{\algofont}
-\SetAlCapHSkip{0pt}
-\IncMargin{-\parindent}
-\renewcommand{\algorithmcfname}{ALGORITHM}
-
-% Page heads
-\markboth{T. Luo, X. Han and X. Liu}{Online Learning to Rank for Information Retrieval}
+\begin{document}
 
 % Title portion
 \title{Online Learning to Rank for Information Retrieval : Project Proposal}
-\author{TINGDAN LUO, XUEYANG HAN, and XIAO LIU \affil{University of Virginia}
+\author{Tingdan Luo (tl3xd)}
+\author{Xueyang Han (xh9cz)}
+\author{Xiao Liu (lx3y)}
+\affiliation{%
+  \institution{University of Virginia}
+  \department{School of Engineering}
+  \city{Charlottesville}
+  \state{VA}
+  \postcode{22903}
+  \country{USA}
 }
 
 \begin{abstract}
 \end{abstract}
 
-\category{H.3}{Information Storage and Retrieval}{H.3.3 Information Search and Retrieval}
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002951.10003317.10003338.10003343</concept_id>
+<concept_desc>Information systems~Learning to rank</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
 
-\begin{document}
+\ccsdesc[500]{Information systems~Learning to rank}
+\keywords{Information retrieval; Learning to rank}
 
 \maketitle
 
 % Head 1
 \section{Introduction}
+There are more than 45 billion web pages on the Internet, and this number is increasing dramatically every year. Ranking of query results has always being a central problem in information retrieval (IR). Learning to rank is the application of machine learning in the construction of ranking models for information retrieval systems. It aims to rank documents by relevance, placing the most relevant documents at the top. There are two types of learning to rank model -- offline learning to rank and online learning to rank. Offline learning to rank depends on a set of human labeled data, whereas online learning to rank depends human interactive feedback in real time.
 
-\section{Goal}
+The purpose of this project is to build a ranking model to rank documents by relevance when given a query. In this project we will implement and compare offline learning and online learning, as well as offline training and online learning schemes. We will also implement state-of-the-art online learning to rank algorithms. After implement and compare different models and algorithms, we will come up with new exploration strategy and analyze and implement it.
+
+\section{Background}
+To begin this project, it is necessary to have a thorough understanding of learning to rank, which is an application of machine learning to solve the problem of ranking for information retrieval systems. In general, a learning to rank method learns the weights of a function that maps a document-query pair described by a feature vector to a value that is used to rank documents for a given query. 
+
+There are disadvantages in both offline and online learning to rank algorithms. 
+
+For the offline learning to rank, creating a complete dataset of query and document pairs with manually labeled relevance tags is expensive for smaller search engines and impractical in personalized search. Online learning to rank improves this problem based on users feedback in real time, however, online learning is more difficult because it is necessary to balance exploration and exploitation. 
 
 \section{Methodology}
+The implementation of our project contains 4 important steps. 
 
-\section{Metrics}
+\begin{enumerate}
+\item Implement and compare offline learning, online learning, offline training with online learning schemes. 
 
-\section{Summary}
+\item Implement state-of-the-art online learning to rank algorithms within the following three papers. 
+
+\begin{itemize}
+    \item Constructing Reliable Gradient Exploration for Online Learning to Rank. \cite{zhao2016constructing}
+    
+    \item Interactively Optimizing Information Retrieval Systems as a Dueling Bandits Problem. \cite{yue2009interactively}
+    
+    \item Multileave Gradient Descent for Fast Online Learning to Rank. \cite{schuth2016multileave}
+\end{itemize}
+
+\item Propose our idea. 
+
+\item Theoretical analysis of our idea. 
+
+\end{enumerate}
+
+\section{Evaluation}
+We will use Lerot to evaluate our ranking model. Lerot is a learning to rank framework, and could offer a solution for evaluating and experimenting with offline and online learning to rank algorithms in living labs and simulations.\cite{schuth2013lerot}
+
+\subsection{Minimal Success}
+Successfully implement offline learning, online learning, offline training with online learning schemes and state-of-the-art online learning.
+
+\subsection{Medium Success}
+Propose and implement our own idea to build a ranking model.
+
+\subsection{Good Success}
+Prove our own ranking model has excellent performance.
+
+% Bibliography
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{IR-Proposal}
 
 \end{document}

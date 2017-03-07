@@ -1020,9 +1020,9 @@ the#1\endcsname{\@thmcounter{#1}}\global
 \def\@evenfoot{\tiny\@runningfoot\hfill\hbox{}}
 \def\sectionmark##1{}\def\subsectionmark##1{}}
 \def\@runningfoot{}
-\def\runningfoot{\def\@runningfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article~\@acmArticle, Publication date: \monthWord{\@acmMonth}\ \@acmYear.}}
+% \def\runningfoot{\def\@runningfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article~\@acmArticle, Publication date: \monthWord{\@acmMonth}\ \@acmYear.}}
 \def\@firstfoot{}
-\def\firstfoot{\def\@firstfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article~\@acmArticle, Publication date: \monthWord{\@acmMonth}\ \@acmYear.}}%, Pages \thepage--\@endpage
+% \def\firstfoot{\def\@firstfoot{\@journalName, Vol.\ \@acmVolume, No.\ \@acmNumber, Article~\@acmArticle, Publication date: \monthWord{\@acmMonth}\ \@acmYear.}}%, Pages \thepage--\@endpage
 %
 \def\@marrayclassiv{\@addtopreamble{$\displaystyle \@nextchar$}}
 \def\@marrayclassz{\ifcase \@lastchclass \@acolampacol \or \@ampacol \or
